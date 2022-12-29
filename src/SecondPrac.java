@@ -85,7 +85,7 @@ public class SecondPrac {
  */
     public static void writeRecord(String fileLocation, String name, String email, int newId) {
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter("dataFile/data.csv", true));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileLocation, true));
             //insert the new record in this format(001,small,small,true)
             writer.write(String.format("%03d, %s, %s, true\n", newId, name, email));
             System.out.println("Added");
